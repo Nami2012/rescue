@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rescue</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">Flood Rescue Mission</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>Emergency List</h1>
+        <a href="/new" class="new-button">+ Add item</a>
+      </div>
+      <div class="index-table-wrapper">
+        <div class="table-head">
+          <span class="id-column">ID</span>
+          <span class="name-column">Name</span>
+          <span class="age-column">Age</span>
+          <span class="contact-column">Contact</span>
+        
+        </div>
+        <ul class="table-body" id="rescuerlist">
+               
+           
+           </ul>
+      </div>
+    </div>
+  </body>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCyigUsL2VQiDW_UKumjeUq7QaN-olQ1PI",
+            authDomain: "rescue-284815.firebaseapp.com",
+            databaseURL: "https://rescue-284815.firebaseio.com",
+            projectId: "rescue-284815",
+            storageBucket: "rescue-284815.appspot.com",
+            messagingSenderId: "383063973458",
+            appId: "1:383063973458:web:a6cb6175add59f7938c98b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+    </script>
+  <script src="app.js"></script>
+
+</html>
