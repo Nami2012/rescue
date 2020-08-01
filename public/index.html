@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>RESCUE</h1>
+
+        <div class="content">
+
+            <form id="addperson">
+                <input type = "text" name ="Name" placeholder="Persons Name">
+                
+                <button>savePerson</button>
+            </form>
+
+            <ul id="Person-list"></ul>
+
+        </div>
+
+        
+        <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFLcBmHX5nvWaLs8OfUXdbybydIrV0AYo",
+    authDomain: "fourth-truck-219707.firebaseapp.com",
+    databaseURL: "https://fourth-truck-219707.firebaseio.com",
+    projectId: "fourth-truck-219707",
+    storageBucket: "fourth-truck-219707.appspot.com",
+    messagingSenderId: "260056862184"
+  };
+  
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
