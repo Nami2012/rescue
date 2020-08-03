@@ -26,6 +26,7 @@ function renderlist(doc){
 }
 
 
+    
 db.collection('Users').get().then((snapshot) =>{
     snapshot.docs.forEach(doc => {
         console.log(doc.data());
@@ -33,3 +34,4 @@ db.collection('Users').get().then((snapshot) =>{
     });
 
 })
+
